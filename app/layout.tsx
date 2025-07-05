@@ -5,6 +5,8 @@ import Navbar from '@/components/navbar/Navbar'
 import Container from '@/components/global/Container'
 import Provider from './provider'
 
+import { ClerkProvider } from '@clerk/nextjs'
+
 const inter = Inter({ subsets: ['latin'] })
 const inconsolata = Inconsolata({ subsets: ['latin'] })
 const roboto = Roboto({ subsets: ['latin'], weight: ['400'] })
@@ -20,13 +22,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning>
-      <body className={roboto.className}>
-        <Provider>
-          <Navbar />
-          <Container className='py-20'>{children}</Container>
-        </Provider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang='en' suppressHydrationWarning>
+        <body className={inconsolata.className}>
+          <Provider>
+            <Navbar />
+            <Container className='py-20'>{children}</Container>
+          </Provider>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }
