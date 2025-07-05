@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang='en' suppressHydrationWarning>
-        <body className={inconsolata.className}>
+        <body>
           <Provider>
             <Navbar />
             <Container className='py-20'>{children}</Container>
