@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang='en' suppressHydrationWarning>
-        <body>
+        <body suppressHydrationWarning>
           <Provider>
             <Navbar />
             <Container className='py-20'>{children}</Container>
