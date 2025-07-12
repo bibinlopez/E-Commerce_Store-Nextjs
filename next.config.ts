@@ -7,16 +7,17 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.pexels.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'lytfsrjawtgmiofoqkqs.supabase.co',
+      },
     ],
   },
-}
-
-export default nextConfig
-
-module.exports = {
   experimental: {
     serverActions: {
       bodySizeLimit: '5mb',
     },
   },
 }
+
+export default nextConfig
