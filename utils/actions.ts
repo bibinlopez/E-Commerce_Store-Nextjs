@@ -2,6 +2,8 @@
 import { redirect } from 'next/navigation'
 import prisma from '@/lib/prisma'
 import { currentUser } from '@clerk/nextjs/server'
+import { imageSchema, productSchema, validateWithZodSchema } from './schemas'
+import { error } from 'console'
 
 const getAuthUser = async () => {
   const user = await currentUser()
@@ -55,24 +57,18 @@ export const createProductAction = async (
   formData: FormData
 ): Promise<{ message: string }> => {
   const user = await getAuthUser()
-  try {
-    const name = formData.get('name') as string
-    const company = formData.get('company') as string
-    const price = Number(formData.get('price')) as number
 
-    // temp
-    const image = formData.get('image') as File
-    const description = formData.get('description') as string
-    const featured = Boolean(formData.get('featured') as string)
+  try {
+    const rawData = Object.fromEntries(formData)
+    const file = formData.get('image') as File
+    const validatedFields = validateWithZodSchema(productSchema, rawData)
+
+    const validateFile = validateWithZodSchema(imageSchema, { image: file })
 
     await prisma.product.create({
       data: {
-        name,
-        company,
-        price,
+        ...validatedFields,
         image: '/images/product-1.jpg',
-        description,
-        featured,
         clerkId: user.id,
       },
     })
