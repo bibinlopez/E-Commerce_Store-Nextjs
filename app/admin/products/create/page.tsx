@@ -6,10 +6,10 @@ import FormContainer from '@/components/form/FormContainer'
 import { createProductAction } from '@/utils/actions'
 
 import PriceInput from '@/components/form/PriceInput'
-import TextAreaInput from '@/components/form/TextAreaInput'
-import CheckboxInput from '@/components/form/CheckboxInput'
 import { SubmitButton } from '@/components/form/Buttons'
 import ImageInput from '@/components/form/ImageInput'
+import Textareainput from '@/components/form/Textareainput'
+import Checkboxinput from '@/components/form/Checkboxinput'
 
 function CreateProduct() {
   const name = faker.commerce.productName()
@@ -38,13 +38,13 @@ function CreateProduct() {
             <PriceInput />
             <ImageInput />
           </div>
-          <TextAreaInput
+          <Textareainput
             name='description'
             labelText='product description'
             defaultValue={description}
           />
           <div className='mt-6'>
-            <CheckboxInput name='featured' label='featured' />
+            <Checkboxinput name='featured' label='featured' />
           </div>
 
           <SubmitButton text='Create Product' className='mt-8' />

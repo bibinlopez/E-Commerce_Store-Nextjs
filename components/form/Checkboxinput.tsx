@@ -8,7 +8,7 @@ type CheckboxInputProps = {
   defaultChecked?: boolean
 }
 
-export default function CheckboxInput({
+export default function Checkboxinput({
   name,
   label,
   defaultChecked = false,

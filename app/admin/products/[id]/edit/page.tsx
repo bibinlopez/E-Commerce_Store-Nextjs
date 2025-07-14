@@ -6,10 +6,10 @@ import {
 import FormContainer from '@/components/form/FormContainer'
 import FormInput from '@/components/form/FormInput'
 import PriceInput from '@/components/form/PriceInput'
-import TextAreaInput from '@/components/form/TextAreaInput'
 import { SubmitButton } from '@/components/form/Buttons'
-import CheckboxInput from '@/components/form/CheckboxInput'
 import ImageInputContainer from '@/components/form/ImageInputContainer'
+import Textareainput from '@/components/form/Textareainput'
+import Checkboxinput from '@/components/form/Checkboxinput'
 
 async function EditProductPage({ params }: { params: { id: string } }) {
   const { id } = await params
@@ -47,13 +47,13 @@ async function EditProductPage({ params }: { params: { id: string } }) {
 
             <PriceInput defaultValue={price} />
           </div>
-          <TextAreaInput
+          <Textareainput
             name='description'
             labelText='product description'
             defaultValue={description}
           />
           <div className='mt-6'>
-            <CheckboxInput
+            <Checkboxinput
               name='featured'
               label='featured'
               defaultChecked={featured}
