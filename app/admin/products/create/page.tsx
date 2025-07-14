@@ -8,8 +8,8 @@ import { createProductAction } from '@/utils/actions'
 import PriceInput from '@/components/form/PriceInput'
 import { SubmitButton } from '@/components/form/Buttons'
 import ImageInput from '@/components/form/ImageInput'
-import Textareainput from '@/components/form/Textareainput'
 import Checkboxinput from '@/components/form/Checkboxinput'
+import Textareainputfield from '@/components/form/Textareainputfield'
 
 function CreateProduct() {
   const name = faker.commerce.productName()
@@ -38,7 +38,7 @@ function CreateProduct() {
             <PriceInput />
             <ImageInput />
           </div>
-          <Textareainput
+          <Textareainputfield
             name='description'
             labelText='product description'
             defaultValue={description}
