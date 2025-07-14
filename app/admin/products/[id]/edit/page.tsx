@@ -11,7 +11,7 @@ import ImageInputContainer from '@/components/form/ImageInputContainer'
 import Checkboxinput from '@/components/form/Checkboxinput'
 import Textareainputfield from '@/components/form/Textareainputfield'
 
-async function EditProductPage({ params }: { params: { id: string } }) {
+async function EditProductPage({ params }: any) {
   const { id } = await params
   const product = await fetchAdminProductDetails(id)
   const { name, company, description, featured, price } = product
