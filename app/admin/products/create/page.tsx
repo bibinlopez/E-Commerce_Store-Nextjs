@@ -6,8 +6,8 @@ import FormContainer from '@/components/form/FormContainer'
 import { createProductAction } from '@/utils/actions'
 
 import PriceInput from '@/components/form/PriceInput'
-import TextAreaInput from '@/components/form/TextAreainput'
-import CheckboxInput from '@/components/form/Checkboxinput'
+import TextAreaInput from '@/components/form/TextAreaInput'
+import CheckboxInput from '@/components/form/CheckboxInput'
 import { SubmitButton } from '@/components/form/Buttons'
 import ImageInput from '@/components/form/ImageInput'
 
