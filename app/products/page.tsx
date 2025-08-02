@@ -1,10 +1,6 @@
 import ProductsContainer from '@/components/products/ProductsContainer'
 
-async function ProductsPage({
-  searchParams,
-}: {
-  searchParams: { layout?: string; search?: string }
-}) {
+async function ProductsPage({ searchParams }: { searchParams: any }) {
   const { layout: _layout, search: _search } = await searchParams
   const layout = _layout || 'grid'
   const search = _search || ''

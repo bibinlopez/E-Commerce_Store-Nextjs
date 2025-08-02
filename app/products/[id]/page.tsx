@@ -5,7 +5,7 @@ import { formatCurrency } from '@/utils/format'
 import FavoriteToggleButton from '@/components/products/FavoriteToggleButton'
 import AddToCart from '@/components/single-product/AddToCart'
 import ProductRating from '@/components/single-product/ProductRating'
-async function SingleProductPage({ params }: { params: { id: string } }) {
+async function SingleProductPage({ params }: any) {
   const { id: _id } = await params
   const product = await fetchSingleProduct(_id)
   const { name, image, company, description, price } = product
