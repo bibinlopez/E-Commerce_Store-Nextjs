@@ -1,7 +1,7 @@
-import FeaturedProducts from '@/components/home/FeaturedProducts';
-import Hero from '@/components/home/Hero';
-import LoadingContainer from '@/components/global/LoadingContainer';
-import { Suspense } from 'react';
+import FeaturedProducts from '@/components/home/FeaturedProducts'
+import Hero from '@/components/home/Hero'
+import LoadingContainer from '@/components/global/LoadingContainer'
+import { Suspense } from 'react'
 function HomPage() {
   return (
     <>
@@ -10,6 +10,6 @@ function HomPage() {
         <FeaturedProducts />
       </Suspense>
     </>
-  );
+  )
 }
-export default HomPage;
+export default HomPage
